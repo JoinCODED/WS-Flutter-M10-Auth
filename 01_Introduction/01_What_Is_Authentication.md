@@ -8,4 +8,4 @@ to add later
 
 And the difference here is that this backend will not allow unregistered users to add a new book.
 
-If you need a starting point, fork and clone (this)[] into your development folder.
+If you need a starting point, fork and clone (this)[https://github.com/JoinCODED/Demo-Flutter-Api-BooksApp] into your development folder.
