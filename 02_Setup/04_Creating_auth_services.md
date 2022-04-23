@@ -13,7 +13,7 @@ In your `services` folder, create a new file `auth_services.dart` and initialize
 class AuthServices {
   final Dio _dio = Dio();
 
-  final _baseUrl = 'http://10.0.2.2:5000';
+  final _baseUrl = 'https://coded-books-api-auth.herokuapp.com/';
 }
 ```
 

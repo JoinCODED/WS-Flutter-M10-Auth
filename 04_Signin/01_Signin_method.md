@@ -6,8 +6,7 @@ In your `services/auth.dart`, create a function to the `/signin` endpoint:
   Future<String> signin({required User user}) async {
     late String token;
     try {
-      Response response =
-          await _dio.post(_baseUrl + '/signin', data: user.toJson());
+      Response response = await Client.dio.post('/signin', data: user.toJson());
       token = response.data["token"];
     } on DioError catch (error) {
       print(error);
