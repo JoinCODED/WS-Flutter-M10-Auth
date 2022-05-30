@@ -45,5 +45,6 @@ flutter pub run build_runner build
 ```
 
 A new file magically appears in your `models` folder, it's called `user.g.dart` and you can find the generated code there.
+If you faced issues running the command, delete book.g.dart and try again, the command will generate them both
 
 You can also do this manually, but for large models with many field, this will save you a lot of time.
