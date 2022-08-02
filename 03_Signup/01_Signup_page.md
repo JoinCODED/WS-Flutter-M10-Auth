@@ -1,6 +1,6 @@
-Let's create a simple page with two fields, one for the password and one for the username:
+Let's create a simple page with two fields, one for the password and another for the username:
 
-In your `pages` folder, create a `signup_page.dart`.
+13. In your `pages` folder, create a `signup_page.dart`.
 
 ```dart
 class SignupPage extends StatelessWidget {
@@ -40,7 +40,7 @@ class SignupPage extends StatelessWidget {
 }
 ```
 
-Let's add this page to our list of routes in `main.dart`:
+14. Add this page to the list of routes in `main.dart`:
 
 ```dart
       GoRoute(

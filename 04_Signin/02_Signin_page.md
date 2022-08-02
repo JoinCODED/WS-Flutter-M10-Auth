@@ -1,4 +1,4 @@
-In your `pages` folder, create a signin page:
+20. In your `pages` folder, create a signin page:
 
 ```dart
 class SigninPage extends StatelessWidget {
@@ -38,7 +38,7 @@ class SigninPage extends StatelessWidget {
 }
 ```
 
-And let's call our signin function with the click of the button:
+21. Pass the `signin` function to the `Sign In` button:
 
 ```dart
     ElevatedButton(
@@ -52,7 +52,7 @@ And let's call our signin function with the click of the button:
     )
 ```
 
-Next, let's include this page in our routes in `main.dart`:
+22. Include `SigninPage` page in the routes in `main.dart`:
 
 ```dart
       GoRoute(
@@ -61,7 +61,7 @@ Next, let's include this page in our routes in `main.dart`:
       ),
 ```
 
-And let's navigate the user to this page when he clicks on the signin button in our drawer:
+23. Navigate the user to the `/signin` page when he/she clicks the `signin` button in the drawer:
 
 ```dart
 ListTile(

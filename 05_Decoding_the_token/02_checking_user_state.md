@@ -1,6 +1,6 @@
-Now let's move to our `Drawer` widget, and have a condition there, if the user is authenticated, we will show a welcome message in the header and a logout button.
+Now, let's move to the `Drawer` widget, and set a condition there. If the user is authenticated, we will show a welcome message in the header and a logout button.
 
-In your `home_page.dart` `Drawer` widget, wrap the `ListView` in a consumer widget:
+26. In the `Drawer` widget inside the `home_page.dart`, wrap the `ListView` in a consumer widget:
 
 ```dart
  drawer: Drawer(

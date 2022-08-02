@@ -1,18 +1,20 @@
-We need to save our token in the device storage, for that we will use a package called `shared_preferences`.
+We need to save our token in the device storage, and to do that, we will use a package called `shared_preferences`.
 
-Install `shared_preferences` package into your project:
+30. Install `shared_preferences` package into your project:
 
 ```shell
 flutter pub add shared_preferences
 ```
 
-Then import it in your provider:
+31. Import it in the auth provider:
 
 ```dart
 import 'package:shared_preferences/shared_preferences.dart';
 ```
 
-The way this works is simple, we store a string and then assign it a key to be able to retrieve it later, so let's use it in our signup function and store the token:
+The way this package works is simple, it stores a string and we can assign it a key to be able to retrieve it later.
+
+In our case, we will store a string named 'token', and assign it our `token` as shown in the code below:
 
 ```dart
   void signup({required User user}) async {
@@ -23,7 +25,7 @@ The way this works is simple, we store a string and then assign it a key to be a
   }
 ```
 
-And we do the same in our signin function:
+32. Use the same package to store the token in the signin function:
 
 ```dart
   void signin({required User user}) async {
@@ -34,7 +36,7 @@ And we do the same in our signin function:
   }
 ```
 
-Repeated code!, let's create a separate function for this:
+Repeated code! Let's create a separate function for this:
 
 ```dart
   void setToken(String token) async {
@@ -43,7 +45,7 @@ Repeated code!, let's create a separate function for this:
   }
 ```
 
-Then use it in both functions:
+33. Use the `setToken` in both `signin` & `signup` functions:
 
 ```dart
   void signup({required User user}) async {
@@ -59,7 +61,7 @@ Then use it in both functions:
   }
 ```
 
-We successfully stored the token, let's create a function to retrieve the token:
+We successfully stored the token. Let's create a function to retrieve it:
 
 ```dart
   void getToken() async {
@@ -69,7 +71,7 @@ We successfully stored the token, let's create a function to retrieve the token:
   }
 ```
 
-And we will call this function in our `isAuth` getter:
+34. Call this function in the `isAuth` getter:
 
 ```dart
   bool get isAuth {
@@ -82,11 +84,11 @@ And we will call this function in our `isAuth` getter:
   }
 ```
 
-Try to signin then restart your app!
+Try to sign in and restart your app!
 
-One more thing, try to signout and then restart your app, you are signed in again!
+One more thing to do, try to sign out and then restart your app, you are signed in again!
 
-In our signout function, we need to clear the token from our storage:
+In the `signout` function, we need to clear the token from our storage:
 
 ```dart
   void logout() async {

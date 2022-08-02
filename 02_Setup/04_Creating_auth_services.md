@@ -5,9 +5,9 @@ Post /signin
 Post /signup
 ```
 
-And we need to send a username and password to those endpoints.
+We need to send a username and password to those endpoints.
 
-In your `services` folder, create a new file `auth_services.dart` and initialize a `dio` instance like we did before:
+8. In your `services` folder, create a new file called `auth_services.dart` and initialize a `dio` instance like we did before:
 
 ```dart
 class AuthServices {
@@ -25,7 +25,7 @@ The response will look like this:
 
 And what we need from that is the token value.
 
-Let's start by creating the `signup` request:
+9. Create the `signup` request as follows:
 
 ```dart
   Future<String> signup({required User user}) async {
@@ -41,11 +41,11 @@ Let's start by creating the `signup` request:
   }
 ```
 
-We created a function that takes a `User` object as an argument, then we passed it to our `post` request, but we used the `toJson` constructor to convert the data to the `json` format that we agreed to use previously.
+We created a function that takes a `User` object as an argument, then we passed it to our `post` request. We used the `toJson` constructor to convert the data to the `json` format that we agreed to use previously.
 
-Then from the `response` object, we selected the `token` property which is a `string`, thus why our function return is of type `String`.
+Then, from the `response` object, we selected the `token` property which is a `string`, this is why our function return is of type `String`.
 
-Next, let's create the `signup` function in our `auth` provider:
+10. Create the `signup` function in the `auth` provider as follows:
 
 ```dart
   void signup({required User user}) async {

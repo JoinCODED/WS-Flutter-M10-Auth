@@ -1,6 +1,7 @@
-We successfully got our token from signing in or signing up, the next step is to use this token to get the user info.
+We successfully got our token from signing in or signing up.
+The next step is to use this token to get the user info.
 
-In your `auth_provider.dart`, we will create a getter that tells us if the user is authenticated or not:
+24. In the `auth_provider.dart` file, create a getter that tells if the user is authenticated:
 
 ```dart
   bool get isAuth {
@@ -11,23 +12,23 @@ In your `auth_provider.dart`, we will create a getter that tells us if the user 
   }
 ```
 
-In the simplest forms, if the token exists, then we have a user, if it's not, the user has to login in our app.
+In the simplest forms, if the token exists, we have a user. Otherwise, the user has to login into the app.
 
-But that's not always right, maybe we have a token but it's expired, in this case we need to sign the user out so he can signin again and get a new token.
+But that is not always the case. Maybe there is a token, but it is expired. In that case, we need to sign the user out in order to make him/her sign in again and get a new token.
 
-To get the expiry date of the token we need to decode it first, and we will use a package for that:
+To get the expiry date of the token, we need to decode it first, and we will use the `jwt_decode` package for that:
 
 ```shell
 flutter pub add jwt_decode
 ```
 
-Import this package in your provider:
+25. Import the `jwt_decode` package in the auth provider file:
 
 ```dart
 import 'package:jwt_decode/jwt_decode.dart';
 ```
 
-Then let's use a cool method this package provides:
+The `jwt_decode` package provides us with an amazing method called `getExpiryDate` that checks if the token is expired.
 
 ```dart
   bool get isAuth {
@@ -38,9 +39,9 @@ Then let's use a cool method this package provides:
   }
 ```
 
-We used `Jwt.getExpiryDate(token)!` to get the expiry time then we made sure that it `isAfter` the date of now, And if it's not, that means the token is expired.
+We used `Jwt.getExpiryDate(token)!` to get the expiry time and we made sure that it `isAfter` the current date and time. If it is not, that means the token is expired.
 
-The next step is to get data from the token and mapping them to our `User` object, and as we mentioned, `JWT` stands for `JSON` web token, so we need to use the `fromJson` constructor:
+The next step is to get the data from the token and map them to our `User` object. As we mentioned, `JWT` stands for `JSON` Web Token, so we need to use the `fromJson` constructor:
 
 ```dart
   bool get isAuth {
@@ -52,4 +53,4 @@ The next step is to get data from the token and mapping them to our `User` objec
   }
 ```
 
-So if the token is not expired, we will map the data to our `user` variable.
+If the token is not expired, we will map the data to the `user` variable.

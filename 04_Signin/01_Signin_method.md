@@ -1,6 +1,6 @@
-We created a user, lets test that out by signing in as that user.
+We created a user. Let's test that out by signing in with the user's credentials.
 
-In your `services/auth.dart`, create a function to the `/signin` endpoint:
+18. In your `services/auth.dart`, create a function for the `/signin` endpoint:
 
 ```dart
   Future<String> signin({required User user}) async {
@@ -15,7 +15,7 @@ In your `services/auth.dart`, create a function to the `/signin` endpoint:
   }
 ```
 
-Then Let's create the function in our `auth` provider:
+19. Create a void function in the `auth` provider that prints the token:
 
 ```dart
   void signin({required User user}) async {
