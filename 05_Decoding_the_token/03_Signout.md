@@ -1,6 +1,6 @@
-The last function to do is the signout function.
+The remaining function to do is the signout function.
 
-In your auth provider:
+27. In the auth provider, add the following function:
 
 ```dart
   void logout() {
@@ -9,7 +9,7 @@ In your auth provider:
   }
 ```
 
-And let's link this function in our `Drawer` button:
+28. Call the `logout` function in the `Drawer` button:
 
 ```dart
 ListTile(
@@ -21,7 +21,7 @@ ListTile(
     ),
 ```
 
-Don't forget to call `notifyListeners` in the signin and signup functions:
+29. Call the `notifyListeners` in the `signin` and `signup` functions:
 
 ```dart
   void signup({required User user}) async {
@@ -35,6 +35,6 @@ Don't forget to call `notifyListeners` in the signin and signup functions:
   }
 ```
 
-Test your code, it works, we can signup/in and out.
+Test your code. It works, we can signup, in, and out.
 
-But try to refresh your app, you will be signed out, we don't want the user to have to sign in each time, it would be nice if we can save the token somewhere!
+Try to refresh your app, you will be signed out 😁. We do not want to force the user to sign in each time the app reloads, it would be nice if we can save the token somewhere in order to keep him/her signed in.

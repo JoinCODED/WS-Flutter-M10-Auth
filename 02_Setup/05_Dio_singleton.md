@@ -1,8 +1,8 @@
-We are initializing 2 Dio instances, one in the books services, and one in the auth services.
+We are initializing two `Dio` instances, one in the books services, and one in the auth services.
 
-So it would be a good idea to create a singleton for `dio` to use in both files.
+It would be a good idea to create a `singleton` for `dio` to use in both files.
 
-In your `services` folder create a file called `client.dart`:
+11. In your `services` folder, create a file called `client.dart` and add the code below:
 
 ```dart
 import 'package:dio/dio.dart';
@@ -12,7 +12,7 @@ class Client {
 }
 ```
 
-Now we can use this singleton in our `BooksServices`:
+12. Use this `singleton` in the `BooksServices`:
 
 ```dart
 class BooksServices {
@@ -77,7 +77,7 @@ class BooksServices {
 }
 ```
 
-And in `AuthServices`:
+And use it in the `AuthServices` as well:
 
 ```dart
 class AuthServices {

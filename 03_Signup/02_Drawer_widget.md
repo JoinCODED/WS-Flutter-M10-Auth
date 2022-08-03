@@ -1,6 +1,6 @@
 Let's introduce a new cool widget, called the `Drawer` widget.
 
-In your `home_page.dart` as a `Scaffold` property, add a `Drawer`:
+15. In the `home_page.dart`, add a `drawer` as a `Scaffold` widget property:
 
 ```dart
 return Scaffold(
@@ -11,7 +11,9 @@ return Scaffold(
 [...]
 ```
 
-The `Drawer` widget takes a `child`, and we will use a `ListView` widget and add 2 `ListTile`s inside it, one to take us to the `signin` page and one for the `signup` page.
+**Note:** A `drawer` can be any widget, but it is often best to use the `Drawer` widget from the material library, which adheres to the Material Design spec.
+
+The `Drawer` widget takes a `child` named argument, and in our case, we will use a `ListView` widget and add two `ListTile`s inside it, one to take us to the `signin` page and the other to take us to the `signup` page.
 
 ```dart
 ListView(
@@ -31,7 +33,7 @@ ListView(
                   )
 ```
 
-Let's add a `DrawerHeader` widget and link the `signup` button to our `signup` page:
+16. Add a `DrawerHeader` widget and link the `signup` button to the `signup` page:
 
 ```dart
 const DrawerHeader(

@@ -1,4 +1,4 @@
-In your `signup` page submit button, call the signup function from our `auth` provider:
+17. In the submit button of the `signup` page, call the signup function from our `auth` provider:
 
 ```dart
     ElevatedButton(

@@ -4,13 +4,13 @@ There are many ways and flows to do authentication, we will use `JWT` tokens to 
 
 A `JWT` is a string made up of three parts, separated by dots (.), and serialized using base64. In the most common serialization format, compact serialization, the JWT looks something like this: xxxxx.yyyyy.zzzzz.
 
-Once decoded, you will get those values:
+Once decoded, you will get those values as follows:
 
 - Id
 - Expiration Time
 - Username
 
-The expiration time is a security mechanism, if the token is expired, the server will throw a `401` error and will refuse to process the request.
+The expiration time is a security mechanism. If the token is expired, the server will throw a `401` error and will refuse to process the request.
 
 Here's an example of a `JWT`:
 

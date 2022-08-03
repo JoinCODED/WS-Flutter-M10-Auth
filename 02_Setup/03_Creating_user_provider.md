@@ -1,6 +1,6 @@
-Let's create a provider for our user info.
+Now, let's create a provider for our user info.
 
-In your `providers` folder create a file called `auth_provider.dart`.
+7. In your `providers` folder, create a file called `auth_provider.dart`.
 
 ```dart
 class AuthProvider extends ChangeNotifier {
@@ -9,4 +9,4 @@ class AuthProvider extends ChangeNotifier {
 }
 ```
 
-We will have 2 properties for now, the `JWT` token and a `User` object that we are going to initialize later so we marked it as `late`.
+We have two properties for now: The `JWT` token, and a `User` object that is marked as `late` because we are going to initialize later.
