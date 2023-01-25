@@ -3,7 +3,7 @@ Authentication is the process of recognizing a user’s identity. It is the mech
 A common example is when a user logs in into your app with a username and a password, and if they are correct, you will give some permissions to this user. In our example, we are going to change the backend url to this one:
 
 ```
-to add later
+https://coded-books-api-auth.herokuapp.com
 ```
 
 And the difference here is that this backend will not allow unregistered users to add a new book.
